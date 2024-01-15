@@ -1,0 +1,12 @@
+@model IEnumerable<Revensky.GitHubApiIntegration.Lib.Repositories.Models.Repository>
+@{
+  ViewData["Title"] = "Repositories";
+}
+
+@foreach (var entity in Model)
+{
+  <p>@entity.Name</p>
+  <p>@entity.Description</p>
+  <p>@entity.Url</p>
+  <p>@entity.Fork</p>
+}

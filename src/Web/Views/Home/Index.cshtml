@@ -1,0 +1,55 @@
+﻿@{
+  ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+  <div class="text-center repositories-search-widget">
+    <form action="/github/repositories" method="get">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <h4>Search User's Repositories</h4>
+      </div>
+
+      <div class="form-group d-flex align-items-center ps-2 mt-3 input-group-widget">
+        <div class="icon d-flex align-items-center justify-content-center">
+          <i class="fa fa-user"></i>
+        </div>
+        <input type="text" name="username" class="form-control input-text-widget" id="username" placeholder="Username"
+          autofocus required />
+      </div>
+
+      <div class="form-group mt-4">
+        <button type="submit" class="btn btn-widget w-100">Search</button>
+      </div>
+    </form>
+  </div>
+
+  <span class="mt-5"></span>
+
+  <div class="text-center repositories-search-widget">
+    <form action="/github/repository" method="get">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <h4>Search Repository by Name and User</h4>
+      </div>
+
+      <div class="form-group d-flex align-items-center ps-2 mt-3 input-group-widget">
+        <div class="icon d-flex align-items-center justify-content-center">
+          <i class="fa fa-user"></i>
+        </div>
+        <input type="text" name="username" class="form-control input-text-widget" id="username" placeholder="Username"
+          autofocus required />
+      </div>
+
+      <div class="form-group d-flex align-items-center ps-2 mt-3 input-group-widget">
+        <div class="icon d-flex align-items-center justify-content-center">
+          <i class="fa fa-user"></i>
+        </div>
+        <input type="text" name="repository" class="form-control input-text-widget" id="repository"
+          placeholder="Repository" autofocus required />
+      </div>
+
+      <div class="form-group mt-4">
+        <button type="submit" class="btn btn-widget w-100">Search</button>
+      </div>
+    </form>
+  </div>
+</div>
